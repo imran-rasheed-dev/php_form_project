@@ -13,20 +13,36 @@
         </h1>
         <div>
             <?php
-                echo "hello world";
+                echo "<h2> hello world</h2>";
              
             ?>
-
+            <br>
            <?php
                 $myvar1 = 100;
                 $myvar2 = 200;
 
-                echo $myvar1;
                 echo $myvar2;
-
+                echo "<br>";
+                echo $myvar1;
+                echo "<br>";
+                
                 // operators in php
-
+                
                 // 1.Artmathic operators
+                
+                echo "The value of myvar1 + myvar2 is <br>";
+                echo $myvar1 + $myvar2;
+                echo "<br>";
+                echo "The value of myvar1 * myvar2 is <br>";
+                echo "<br>";
+                echo $myvar1 * $myvar2;
+                echo "<br>";
+                echo "The value of myvar1 / myvar2 is <br>";
+                echo "<br>";
+                echo "The value of myvar1 - myvar2 is <br>";
+                echo "<br>";
+                echo $myvar1 - $myvar2;
+                
                 // 2.Assignment operators
                 // 3.Comparison operators
                 // 4.Logical operators
