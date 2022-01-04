@@ -47,6 +47,62 @@
             echo $programminglang[0];
             echo "<br>";
             echo count($programminglang);
+            echo "<br>";
+            
+            $a = 0;
+            while ($a <= 10) {
+                echo "The value Variable A (using while loop) is: ";
+                echo $a;
+                echo "<br>";
+                $a++;
+            }
+
+            // Iterating arrays in PHP using while loop
+            $a = 0;
+            while ($a < count($programminglang)) {
+                echo "The value of Language (using while loop) is: ";
+                echo $programminglang[$a];
+                echo "<br>";
+                $a++;
+            }
+
+            // do while loop
+            $b = 100;
+            do {
+                echo "the value of b (using do while loop) is ";
+                echo $b;
+                echo "<br>";
+                $b++;
+            } while ($b < 10);
+
+            // for loop
+            for ($a=0; $a < 10; $a++) {
+                echo "<br> The value of a from for loop is: ";
+                echo $a;
+            }
+
+            // foreach loop
+
+            foreach ($programminglang as $value) {
+                echo "<br>The value from foreach loop is ";
+                echo $value;
+            }
+
+            // function in PHP
+
+            function number() {
+                echo "<br>The number is Five";
+            }
+
+            number();
+
+            function print_number($number) {
+                echo "<br>Your number is ";
+                echo $number;
+            }
+
+            print_number(100);
+
         ?>
     </div>
 </body>
