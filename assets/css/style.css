@@ -12,8 +12,14 @@
 }
 
 .container h1,
-.container h3 {
+.container h3,
+.container p {
 	text-align: center;
+}
+
+.container p {
+	font-size: 18px;
+	text-transform: capitalize;
 }
 
 input,
