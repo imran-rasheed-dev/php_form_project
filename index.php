@@ -2,17 +2,23 @@
 $insert = false;
 
 if(isset($_POST['name'])){
+    // set connection variables
+
     $server = "localhost";
     $username = "root";
     $password = "";
 
+    // creat a database connection
     $con = mysqli_connect($server, $username, $password);
-
+    
+    // check for connection success
     if(!$con) {
         die("connection to this database failed due to" . mysqli_connect_error());
     }
     // echo "Success connecting to the DB";
 
+
+    // collect post variables
     $name = $_POST['name'];
     $gender = $_POST['gender'];
     $age = $_POST['age'];
@@ -22,14 +28,18 @@ if(isset($_POST['name'])){
     $sql = "INSERT INTO `trip`.`trip` (`name`, `age`, `gender`, `email`, `phone`, `other`, `dt`) VALUES ('$name', '$age', '$gender', '$email', '$phone', '$desc', current_timestamp());";
 
     // echo $sql;
-
+    // Execute the query
     if($con->query($sql) == true){
         // echo "Successfully Inserted";
+        
+        // Flag for successful insertion
         $insert = true;
     }
     else{
         echo "ERROR: $sql <br> $con->error";
     }
+
+    // close the database connection
     $con->close();
 
 }
